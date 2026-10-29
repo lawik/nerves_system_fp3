@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- The USB webcam (UVC) gadget function, `usb_f_uvc`: a configfs gadget
+  can now present the phone to a computer as a USB camera. The built-in
+  USB Ethernet gadget (`g_ether`) holds the port from boot: unbind it
+  (write `gadget.0` to `/sys/bus/gadget/drivers/g_ether/unbind`) before
+  binding another gadget, and bind it back after.
+
 ## v0.3.0
 
 The cameras now run through the phone's camera image processor (the
